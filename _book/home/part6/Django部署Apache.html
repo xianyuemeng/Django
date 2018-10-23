@@ -1,0 +1,833 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Django部署(Apache) | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../../home/part6/富文本编辑器.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="8.11"
+        data-chapter-title="Django部署(Apache)"
+        data-filepath="home/part6/Django部署Apache.md"
+        data-basepath="../.."
+        data-revision="Tue Oct 23 2018 23:00:10 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="home/Virtualenv.html">
+            
+                
+                    <a href="../../home/Virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="home/Web开发介绍.html">
+            
+                
+                    <a href="../../home/Web开发介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Web开发介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="home/part1/Django简介.html">
+            
+                
+                    <a href="../../home/part1/Django简介.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="home/part1/Django入门.html">
+            
+                
+                    <a href="../../home/part1/Django入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="home/part1/创建应用.html">
+            
+                
+                    <a href="../../home/part1/创建应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        创建应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="home/part2/URLconf路由.html">
+            
+                
+                    <a href="../../home/part2/URLconf路由.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        URLconf路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="home/part3/Model模型.html">
+            
+                
+                    <a href="../../home/part3/Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="home/part3/1.定义模型.html">
+            
+                
+                    <a href="../../home/part3/1.定义模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="home/part3/2.模型实例.html">
+            
+                
+                    <a href="../../home/part3/2.模型实例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        模型实例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="home/part3/3.模型查询.html">
+            
+                
+                    <a href="../../home/part3/3.模型查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        模型查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="home/part3/4.Model模型.html">
+            
+                
+                    <a href="../../home/part3/4.Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="home/part4/View视图.html">
+            
+                
+                    <a href="../../home/part4/View视图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        View视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="home/part4/HttpReqeust.html">
+            
+                
+                    <a href="../../home/part4/HttpReqeust.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        HttpReqeust
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="home/part4/QueryDict.html">
+            
+                
+                    <a href="../../home/part4/QueryDict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        QueryDict
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="home/part4/HttpResponse.html">
+            
+                
+                    <a href="../../home/part4/HttpResponse.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        HttpResponse
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="home/part5/Template模板.html">
+            
+                
+                    <a href="../../home/part5/Template模板.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Template模板
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="home/part5/模板语法.html">
+            
+                
+                    <a href="../../home/part5/模板语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        模板语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="home/part5/模板继承.html">
+            
+                
+                    <a href="../../home/part5/模板继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        模板继承
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="home/part6/常用web模块.html">
+            
+                
+                    <a href="../../home/part6/常用web模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        常用web模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="home/part6/静态文件.html">
+            
+                
+                    <a href="../../home/part6/静态文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="home/part6/Csrf.html">
+            
+                
+                    <a href="../../home/part6/Csrf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Csrf
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="home/part6/Ajax.html">
+            
+                
+                    <a href="../../home/part6/Ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Ajax
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="home/part6/状态保持.html">
+            
+                
+                    <a href="../../home/part6/状态保持.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="home/part6/验证码.html">
+            
+                
+                    <a href="../../home/part6/验证码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        验证码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="home/part6/中间件.html">
+            
+                
+                    <a href="../../home/part6/中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="home/part6/文件上传.html">
+            
+                
+                    <a href="../../home/part6/文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        文件上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="home/part6/密码管理.html">
+            
+                
+                    <a href="../../home/part6/密码管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        密码管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="home/part6/分页及优化.html">
+            
+                
+                    <a href="../../home/part6/分页及优化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        分页及优化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="home/part6/富文本编辑器.html">
+            
+                
+                    <a href="../../home/part6/富文本编辑器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        富文本编辑器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.11" data-path="home/part6/Django部署Apache.html">
+            
+                
+                    <a href="../../home/part6/Django部署Apache.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.11.</b>
+                        
+                        Django部署(Apache)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="django&#x90E8;&#x7F72;apache">Django&#x90E8;&#x7F72;(Apache)</h1>
+<hr>
+<blockquote>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x4F7F;&#x7528;python3 manage.py runserver&#x6765;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x53EA;&#x9002;&#x7528;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x7A33;&#x5B9A;&#x800C;&#x6301;&#x7EED;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6BD4;&#x5982;Apache, Nginx, IIS&#x7B49;&#xFF0C;&#x672C;&#x6587;&#x5C06;&#x4EE5; Apache&#x4E3A;&#x4F8B;&#x3002;</p>
+<p>&#x4F7F;&#x7528;Apache&#x548C;mod_wsgi&#x90E8;&#x7F72;Django &#x662F;&#x4E00;&#x79CD;&#x4E45;&#x7ECF;&#x8003;&#x9A8C;&#x7684;&#x5C06;Django&#x6295;&#x5165;&#x751F;&#x4EA7;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>mod_wsgi&#x662F;&#x4E00;&#x4E2A;Apache&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x6258;&#x7BA1;&#x4EFB;&#x4F55;Python WSGI&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5305;&#x62EC;Django&#x3002;</p>
+<p>Django&#x5C06;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;&#x652F;&#x6301;mod_wsgi&#x7684;Apache&#x7248;&#x672C;&#x3002;</p>
+</blockquote>
+<h3 id="&#x6D4B;&#x8BD5;&#x73AF;&#x5883;">&#x6D4B;&#x8BD5;&#x73AF;&#x5883;</h3>
+<ul>
+<li>Ubuntu 16.04</li>
+<li>Python 3.5.2</li>
+<li>Django 1.11.7</li>
+<li>Apache 2.4</li>
+</ul>
+<hr>
+<h2 id="&#x914D;&#x7F6E;&#x6B65;&#x9AA4;">&#x914D;&#x7F6E;&#x6B65;&#x9AA4;</h2>
+<ul>
+<li><h3 id="1apache2&#x5B89;&#x88C5;">1.Apache2&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-bash">  Apache2&#x5B89;&#x88C5;
+  sudo apt-get install apache2
+
+  &#x67E5;&#x770B;&#x7248;&#x672C;
+
+  apachectl -v
+
+  Server version: Apache/<span class="hljs-number">2.4</span>.<span class="hljs-number">18</span> (Ubuntu)
+
+  Server built: <span class="hljs-number">2017</span>-<span class="hljs-number">09</span>-<span class="hljs-number">18</span>T15:<span class="hljs-number">09</span>:<span class="hljs-number">02</span>
+</code></pre>
+</li>
+<li><h3 id="2&#x786E;&#x4FDD;&#x6709;127001-localhost&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x52A0;&#x4E0A;&#x3002;">2.&#x786E;&#x4FDD;&#x6709;127.0.0.1 localhost&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x52A0;&#x4E0A;&#x3002;</h3>
+<pre><code class="lang-bash">  sudo vim /etc/hosts
+
+  <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>       localhost
+  <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>       www.pyweb.cn
+</code></pre>
+</li>
+<li><h3 id="3&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;-&#x8F93;&#x5165;-127001&#x6216;localhost">3.&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668; &#x8F93;&#x5165; 127.0.0.1&#x6216;localhost</h3>
+<pre><code class="lang-bash">  &#x51FA;&#x73B0; Apache2 Ubuntu Default Page
+
+  &#x6216;It works!
+
+  &#x5219;&#x6210;&#x529F;
+</code></pre>
+</li>
+<li><h3 id="4&#x5B89;&#x88C5;apache2&#x89E3;&#x6790;python&#x7684;&#x5305;-wsgi&#x7A0B;&#x5E8F;&#x5305;">4.&#x5B89;&#x88C5;apache2&#x89E3;&#x6790;python&#x7684;&#x5305; wsgi&#x7A0B;&#x5E8F;&#x5305;</h3>
+<pre><code class="lang-vim">  sudo apt-<span class="hljs-built_in">get</span> install libapache2-<span class="hljs-keyword">mod</span>-wsgi-<span class="hljs-keyword">py3</span>
+
+  &#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E; &#x8FDB;&#x5165; /usr/lib/apache2/modules &#x76EE;&#x5F55;
+  <span class="hljs-keyword">cd</span> /usr/lib/apache2/modules
+  &#x67E5;&#x770B;&#x662F;&#x5426;&#x5B58;&#x5728;mod_wsgi.<span class="hljs-keyword">so</span>-<span class="hljs-number">3.5</span>
+</code></pre>
+</li>
+<li><h3 id="5&#x914D;&#x7F6E;&#x4F7F;apache2&#x52A0;&#x8F7D;modwsgi&#x5305;">5.&#x914D;&#x7F6E;&#x4F7F;apache2&#x52A0;&#x8F7D;mod-wsgi&#x5305;</h3>
+<pre><code class="lang-vim">  &#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+  sudo <span class="hljs-keyword">vim</span> /etc/apache2/apache2.<span class="hljs-keyword">conf</span>
+
+  &#x5728;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x540E; &#x6DFB;&#x52A0;
+
+  LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.<span class="hljs-keyword">so</span>-<span class="hljs-number">3.5</span>
+</code></pre>
+</li>
+<li><h3 id="6&#x521B;&#x5EFA;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">6.&#x521B;&#x5EFA;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<pre><code class="lang-vim">  &#x7F16;&#x8F91;&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+  sudo vim /etc/apache2/sites-available/myproject.conf
+
+  &#x914D;&#x7F6E;&#x5185;&#x5BB9;:
+  &lt;VirtualHost *:80&gt;
+  ServerName www.pyweb.cn
+  ServerAdmin py@163.cn
+  #wsgi&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+  WSGIDaemonProcess python-path=/var/www/myproject
+  WSGIScriptAlias / /var/www/myproject/myproject/wsgi.py
+  &lt;Directory /var/www/myproject/myproject&gt;
+      &lt;Files wsgi.py&gt;
+          Require all granted
+      &lt;/Files&gt;
+  &lt;/Directory&gt;
+  #&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+  DocumentRoot /var/www/myproject
+  &lt;Directory /var/www/myproject&gt;
+      Require all granted
+  &lt;/Directory&gt;
+  #&#x9759;&#x6001;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+  Alias /static/ /var/www/myproject/static/
+  &lt;Directory /var/www/myproject/static/&gt;
+      Require all granted
+  &lt;/Directory&gt;
+  #&#x9519;&#x8BEF;&#x65E5;&#x5FD7;
+  ErrorLog ${APACHE_LOG_DIR}/django-myproject-error.log
+  CustomLog ${APACHE_LOG_DIR}/myproject-django.log combined
+  &lt;/VirtualHost&gt;
+</code></pre>
+</li>
+<li><h3 id="7&#x5C06;&#x5F53;&#x524D;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8F6F;&#x8FDE;&#x63A5;&#x5230;etcapache2sitesenabled">7.&#x5C06;&#x5F53;&#x524D;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8F6F;&#x8FDE;&#x63A5;&#x5230;/etc/apache2/sites-enabled</h3>
+<pre><code class="lang-vim">  <span class="hljs-keyword">cd</span> /etc/apache2/sites-enabled
+
+  sudo <span class="hljs-keyword">ln</span> -<span class="hljs-keyword">s</span> ../sites-available/myproject.<span class="hljs-keyword">conf</span> ./
+</code></pre>
+</li>
+<li><h3 id="8&#x6267;&#x884C;&#x547D;&#x4EE4;-&#x751F;&#x6548;&#x5F53;&#x524D;&#x914D;&#x7F6E;">8.&#x6267;&#x884C;&#x547D;&#x4EE4; &#x751F;&#x6548;&#x5F53;&#x524D;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-vim">
+
+</code></pre>
+</li>
+<li><h3 id="8&#x6267;&#x884C;&#x547D;&#x4EE4;-&#x751F;&#x6548;&#x5F53;&#x524D;&#x914D;&#x7F6E;">8.&#x6267;&#x884C;&#x547D;&#x4EE4; &#x751F;&#x6548;&#x5F53;&#x524D;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-vim">  sudo a2ensite myproject.<span class="hljs-keyword">conf</span>
+
+  &#x5982;&#x679C;&#x9700;&#x8981;&#x8BA9;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x5931;&#x6548;,&#x53EF;&#x4EE5;&#x6267;&#x884C; sudo a2dissite myproject.<span class="hljs-keyword">conf</span>
+</code></pre>
+</li>
+<li><h3 id="9&#x914D;&#x7F6E;django&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x53CA;&#x4FEE;&#x6539;seetingpy&#x6587;&#x4EF6;&#xFF0C;">9.&#x914D;&#x7F6E;Django&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x53CA;&#x4FEE;&#x6539;seeting.py&#x6587;&#x4EF6;&#xFF0C;</h3>
+<pre><code class="lang-vim">  &#x9996;&#x5148;&#x628A;myproject&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x62F7;&#x8D1D;&#x81F3; /var/www/&#x76EE;&#x5F55;&#x4E0B;
+
+  &#x5728;&#x5C06;&#x5176;ALLOWED_HOSTS=[]&#x6539;&#x4E3A;
+
+  ALLOWED_HOSTS=[<span class="hljs-string">&apos;www.pyweb.cn&apos;</span>]&#xFF0C;&#x591A;&#x4E2A;&#x57DF;&#x540D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x9017;&#x53F7;&#x9694;&#x5F00;&#x3002;
+</code></pre>
+</li>
+<li><h3 id="10&#x4FEE;&#x6539;django&#x7684;wsgipy&#x6587;&#x4EF6;">10.&#x4FEE;&#x6539;Django&#x7684;wsgi.py&#x6587;&#x4EF6;</h3>
+<p>  ```python
+  import os
+  os.environ[&quot;DJANGO_SETTINGS_MODULE&quot;] = &quot;myproject.settings&quot;</p>
+<h1 id="osenvironsetdefaultdjangosettingsmodule-pyjfivesettings">os.environ.setdefault(&quot;DJANGO_SETTINGS_MODULE&quot;, &quot;pyjfive.settings&quot;)</h1>
+<p>  from os.path import join,dirname,abspath
+  PROJECT<em>DIR = dirname(dirname(abspath(<em>_file</em></em>)))</p>
+<p>  import sys # 4
+  sys.path.insert(0,PROJECT_DIR)</p>
+</li>
+</ul>
+<pre><code>from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+```
+</code></pre><ul>
+<li><h3 id="&#x6700;&#x540E;&#x91CD;&#x542F;apache2">&#x6700;&#x540E;:&#x91CD;&#x542F;apache2</h3>
+<pre><code class="lang-vim">  sudo service apache2 restart
+</code></pre>
+</li>
+<li><h3 id="&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;">&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;</h3>
+<pre><code class="lang-vim">  http://www.pyweb.cn/
+</code></pre>
+</li>
+<li><h3 id="&#x6D4F;&#x89C8;&#x5668;&#x9519;&#x8BEF;-500">&#x6D4F;&#x89C8;&#x5668;&#x9519;&#x8BEF; 500</h3>
+<pre><code class="lang-vim">  Internal Server Error
+  The server encountered <span class="hljs-keyword">an</span> internal error <span class="hljs-built_in">or</span> misconfiguration <span class="hljs-built_in">and</span> was unable <span class="hljs-keyword">to</span> <span class="hljs-built_in">complete</span> your request.
+  Please contact the server administrator at [<span class="hljs-keyword">no</span> address given] <span class="hljs-keyword">to</span> inform them of the time this error occurred,
+  <span class="hljs-built_in">and</span> the actions you performed just before this error.
+  More information about this error may <span class="hljs-keyword">be</span> available in the server error <span class="hljs-built_in">log</span>.
+  Apache/<span class="hljs-number">2.4</span>.<span class="hljs-number">18</span> (Ubuntu) Server at www.py6web.<span class="hljs-keyword">com</span> Port <span class="hljs-number">80</span>
+</code></pre>
+</li>
+<li><h4 id="1&#x67E5;&#x770B;apache2&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;">1.&#x67E5;&#x770B;apache2&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;</h4>
+<pre><code class="lang-vim">  cd /var/log/apache2/
+
+  File &quot;/var/www/myproject-test/myproject/wsgi.py&quot;, line 17, in &lt;module&gt;, referer: http://www.pyweb.com/
+  from django.core.wsgi import get_wsgi_application, referer: http://www.pyweb.com/
+  ImportError: No module named &apos;django&apos;, referer: http://www.pyweb.com/
+</code></pre>
+</li>
+<li><h4 id="2&#x95EE;&#x9898;&#x5206;&#x6790;">2.&#x95EE;&#x9898;&#x5206;&#x6790;</h4>
+<pre><code class="lang-vim">  &#x8FDB;&#x5165;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;&#x547D;&#x4EE4; pip3 show Djando &#x67E5;&#x770B;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;django
+  ---
+  Metadata-Version: 1.1
+  Name: Django
+  Version: 1.11.8
+
+  &#x5207;&#x6362;&#x81F3;root&#x7528;&#x6237; sudo su 
+
+  &#x8FDB;&#x5165;python3&#x7684;shell&#x6A21;&#x5F0F;
+  python3
+  #&#x52A0;&#x8F7D;django&#x6A21;&#x5757;
+  import django
+  #&#x9519;&#x8BEF;&#xFF1A;No module named &apos;django&apos;
+</code></pre>
+</li>
+<li><h4 id="3&#x89E3;&#x51B3;&#x65B9;&#x6848;">3.&#x89E3;&#x51B3;&#x65B9;&#x6848;</h4>
+<pre><code class="lang-vim">  &#x5728;&#x5F53;&#x524D;root&#x7528;&#x6237;&#x4E0B; &#x5B89;&#x88C5;django
+  sudo su
+  pip3 install django==<span class="hljs-number">1.11</span>
+</code></pre>
+</li>
+<li><h3 id="&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x9519;&#x8BEF;">&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x9519;&#x8BEF;:</h3>
+<ul>
+<li><h4 id="&#x7ED9;static&#x6587;&#x4EF6;&#x5939;&#x6216;web&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x9012;&#x5F52;&#x8FFD;&#x52A0;&#x4E00;&#x4E2A;wwwdata&#x7528;&#x6237;&#x6743;&#x9650;">&#x7ED9;static&#x6587;&#x4EF6;&#x5939;&#x6216;web&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x9012;&#x5F52;&#x8FFD;&#x52A0;&#x4E00;&#x4E2A;www-data&#x7528;&#x6237;&#x6743;&#x9650;</h4>
+<pre><code class="lang-vim">sudo setfacl -R -m u:www-data:rwx web/
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../home/part6/富文本编辑器.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 富文本编辑器"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

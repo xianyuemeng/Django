@@ -1,0 +1,801 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>模板继承 | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../home/part6/常用web模块.html" />
+    
+    
+    <link rel="prev" href="../../home/part5/模板语法.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="7.2"
+        data-chapter-title="模板继承"
+        data-filepath="home/part5/模板继承.md"
+        data-basepath="../.."
+        data-revision="Tue Oct 23 2018 23:00:10 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="home/Virtualenv.html">
+            
+                
+                    <a href="../../home/Virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="home/Web开发介绍.html">
+            
+                
+                    <a href="../../home/Web开发介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Web开发介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="home/part1/Django简介.html">
+            
+                
+                    <a href="../../home/part1/Django简介.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="home/part1/Django入门.html">
+            
+                
+                    <a href="../../home/part1/Django入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="home/part1/创建应用.html">
+            
+                
+                    <a href="../../home/part1/创建应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        创建应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="home/part2/URLconf路由.html">
+            
+                
+                    <a href="../../home/part2/URLconf路由.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        URLconf路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="home/part3/Model模型.html">
+            
+                
+                    <a href="../../home/part3/Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="home/part3/1.定义模型.html">
+            
+                
+                    <a href="../../home/part3/1.定义模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="home/part3/2.模型实例.html">
+            
+                
+                    <a href="../../home/part3/2.模型实例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        模型实例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="home/part3/3.模型查询.html">
+            
+                
+                    <a href="../../home/part3/3.模型查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        模型查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="home/part3/4.Model模型.html">
+            
+                
+                    <a href="../../home/part3/4.Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="home/part4/View视图.html">
+            
+                
+                    <a href="../../home/part4/View视图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        View视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="home/part4/HttpReqeust.html">
+            
+                
+                    <a href="../../home/part4/HttpReqeust.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        HttpReqeust
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="home/part4/QueryDict.html">
+            
+                
+                    <a href="../../home/part4/QueryDict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        QueryDict
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="home/part4/HttpResponse.html">
+            
+                
+                    <a href="../../home/part4/HttpResponse.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        HttpResponse
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="home/part5/Template模板.html">
+            
+                
+                    <a href="../../home/part5/Template模板.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Template模板
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="home/part5/模板语法.html">
+            
+                
+                    <a href="../../home/part5/模板语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        模板语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.2" data-path="home/part5/模板继承.html">
+            
+                
+                    <a href="../../home/part5/模板继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        模板继承
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="home/part6/常用web模块.html">
+            
+                
+                    <a href="../../home/part6/常用web模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        常用web模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="home/part6/静态文件.html">
+            
+                
+                    <a href="../../home/part6/静态文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="home/part6/Csrf.html">
+            
+                
+                    <a href="../../home/part6/Csrf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Csrf
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="home/part6/Ajax.html">
+            
+                
+                    <a href="../../home/part6/Ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Ajax
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="home/part6/状态保持.html">
+            
+                
+                    <a href="../../home/part6/状态保持.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="home/part6/验证码.html">
+            
+                
+                    <a href="../../home/part6/验证码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        验证码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="home/part6/中间件.html">
+            
+                
+                    <a href="../../home/part6/中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="home/part6/文件上传.html">
+            
+                
+                    <a href="../../home/part6/文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        文件上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="home/part6/密码管理.html">
+            
+                
+                    <a href="../../home/part6/密码管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        密码管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="home/part6/分页及优化.html">
+            
+                
+                    <a href="../../home/part6/分页及优化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        分页及优化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="home/part6/富文本编辑器.html">
+            
+                
+                    <a href="../../home/part6/富文本编辑器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        富文本编辑器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="home/part6/Django部署Apache.html">
+            
+                
+                    <a href="../../home/part6/Django部署Apache.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.11.</b>
+                        
+                        Django部署(Apache)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6A21;&#x677F;&#x7EE7;&#x627F;">&#x6A21;&#x677F;&#x7EE7;&#x627F;</h1>
+<hr>
+<ul>
+<li><strong>&#x6A21;&#x677F;&#x7EE7;&#x627F;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#xFF0C;&#x5B9E;&#x73B0;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x91CD;&#x7528;</strong></li>
+<li>&#x5178;&#x578B;&#x5E94;&#x7528;&#xFF1A;&#x7F51;&#x7AD9;&#x7684;&#x5934;&#x90E8;&#x3001;&#x5C3E;&#x90E8;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5728;&#x7236;&#x6A21;&#x677F;&#x4E2D;&#xFF0C;&#x5B50;&#x6A21;&#x677F;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x590D;&#x5B9A;&#x4E49;</li>
+<li>block&#x6807;&#x7B7E;&#xFF1A;&#x5728;&#x7236;&#x6A21;&#x677F;&#x4E2D;&#x9884;&#x7559;&#x533A;&#x57DF;&#xFF0C;&#x5728;&#x5B50;&#x6A21;&#x677F;&#x4E2D;&#x586B;&#x5145;</li>
+<li><strong>extends&#x7EE7;&#x627F;&#xFF1A;&#x7EE7;&#x627F;&#xFF0C;&#x5199;&#x5728;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x884C;</strong></li>
+<li><p>&#x5B9A;&#x4E49;&#x7236;&#x6A21;&#x677F;base.html</p>
+<pre><code class="lang-html">  { %  block block_name  % }
+  &#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x503C;
+  &#x5982;&#x679C;&#x4E0D;&#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;
+  { %  endblock  % }
+</code></pre>
+</li>
+<li><p>&#x5B9A;&#x4E49;&#x5B50;&#x6A21;&#x677F;index.html</p>
+<pre><code class="lang-html">  { %  extends &quot;base.html&quot;  % }
+</code></pre>
+</li>
+<li><p>&#x5728;&#x5B50;&#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;block&#x586B;&#x5145;&#x9884;&#x7559;&#x533A;&#x57DF;</p>
+<pre><code class="lang-html">  { %  block block_name  % }
+      &#x5B9E;&#x9645;&#x586B;&#x5145;&#x5185;&#x5BB9;
+  { %  endblock  % }
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h3>
+<ul>
+<li>&#x5982;&#x679C;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x4F7F;&#x7528;extends&#x6807;&#x7B7E;&#xFF0C;&#x5B83;&#x5FC5;&#x987B;&#x662F;&#x6A21;&#x7248;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;</li>
+<li>&#x4E0D;&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x6A21;&#x7248;&#x4E2D;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x76F8;&#x540C;&#x540D;&#x5B57;&#x7684;block&#x6807;&#x7B7E;</li>
+<li>&#x5B50;&#x6A21;&#x7248;&#x4E0D;&#x5FC5;&#x5B9A;&#x4E49;&#x5168;&#x90E8;&#x7236;&#x6A21;&#x7248;&#x4E2D;&#x7684;blocks&#xFF0C;&#x5982;&#x679C;&#x5B50;&#x6A21;&#x7248;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;block&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x4E86;&#x7236;&#x6A21;&#x7248;&#x4E2D;&#x7684;&#x9ED8;&#x8BA4;&#x503C;</li>
+<li>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5927;&#x91CF;&#x7684;&#x590D;&#x5236;&#x5185;&#x5BB9;&#xFF0C;&#x90A3;&#x5C31;&#x5E94;&#x8BE5;&#x628A;&#x5185;&#x5BB9;&#x79FB;&#x52A8;&#x5230;&#x7236;&#x6A21;&#x677F;&#x4E2D;</li>
+<li>&#x4F7F;&#x7528;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7236;&#x6A21;&#x677F;&#x4E2D;block&#x7684;&#x5185;&#x5BB9;</li>
+<li><p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9;endblock&#x6807;&#x7B7E;&#x4E00;&#x4E2A;&#x540D;&#x5B57;</p>
+<pre><code class="lang-html">  { %  block block_name  % }
+      &#x533A;&#x57DF;&#x5185;&#x5BB9;
+  { %  endblock block_name  % }
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x4E09;&#x5C42;&#x7EE7;&#x627F;&#x7ED3;&#x6784;">&#x4E09;&#x5C42;&#x7EE7;&#x627F;&#x7ED3;&#x6784;</h3>
+<ul>
+<li>&#x4E09;&#x5C42;&#x7EE7;&#x627F;&#x7ED3;&#x6784;&#x4F7F;&#x4EE3;&#x7801;&#x5F97;&#x5230;&#x6700;&#x5927;&#x7A0B;&#x5EA6;&#x7684;&#x590D;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x4F7F;&#x5F97;&#x6DFB;&#x52A0;&#x5185;&#x5BB9;&#x66F4;&#x52A0;&#x7B80;&#x5355;</li>
+<li><p>&#x5982;&#x4E0B;&#x56FE;&#x4E3A;&#x5E38;&#x89C1;&#x7684;&#x7535;&#x5546;&#x9875;&#x9762;</p>
+<p>  <img src="../images/Image1.png" alt=""></p>
+</li>
+<li><h4 id="1&#x521B;&#x5EFA;&#x6839;&#x7EA7;&#x6A21;&#x677F;">1.&#x521B;&#x5EFA;&#x6839;&#x7EA7;&#x6A21;&#x677F;</h4>
+<ul>
+<li>&#x540D;&#x79F0;&#x4E3A;&#x201C;base.html&#x201D;</li>
+<li><p>&#x5B58;&#x653E;&#x6574;&#x4E2A;&#x7AD9;&#x70B9;&#x5171;&#x7528;&#x7684;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-html">  <span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>{ %  block title  % }{ %  endblock  % } &#x6C34;&#x679C;&#x8D85;&#x5E02;<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+          top--
+          <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>/&gt;</span>
+          { %  block left  % }
+
+          { %  endblock  % }
+
+          { %  block content  % }
+
+          { %  endblock  % }
+          <span class="hljs-tag">&lt;<span class="hljs-title">hr</span>/&gt;</span>
+          bottom
+      <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="2&#x521B;&#x5EFA;&#x5206;&#x652F;&#x6A21;&#x7248;">2.&#x521B;&#x5EFA;&#x5206;&#x652F;&#x6A21;&#x7248;</h4>
+<ul>
+<li>&#x7EE7;&#x627F;&#x81EA;base.html</li>
+<li>&#x540D;&#x4E3A;&#x201C;base_*.html&#x201D;</li>
+<li>&#x5B9A;&#x4E49;&#x7279;&#x5B9A;&#x5206;&#x652F;&#x5171;&#x7528;&#x7684;&#x5185;&#x5BB9;</li>
+<li><p>&#x5B9A;&#x4E49;base_goods.html</p>
+<pre><code class="lang-html">  { %  extends &apos;temtest/base.html&apos;  % }
+
+  { %  block title  % }&#x5546;&#x54C1;{ %   endblock   % }
+
+  { %  block left  % }
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>goods left<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  { %  endblock  % }
+</code></pre>
+</li>
+<li><p>&#x5B9A;&#x4E49;base_user.html</p>
+<pre><code class="lang-html">  { %  extends &apos;temtest/base.html&apos;  % }
+
+  { %  block title  % }&#x7528;&#x6237;&#x4E2D;&#x5FC3;{ %  endblock   % }
+
+  { %  block left  % }
+      <span class="hljs-tag">&lt;<span class="hljs-title">font</span> <span class="hljs-attribute">color</span>=<span class="hljs-value">&apos;blue&apos;</span>&gt;</span>user left<span class="hljs-tag">&lt;/<span class="hljs-title">font</span>&gt;</span>
+  { %  endblock  % }
+</code></pre>
+</li>
+<li><p>&#x5B9A;&#x4E49;index.html&#xFF0C;&#x7EE7;&#x627F;&#x81EA;base.html&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5199;left&#x5757;</p>
+<pre><code class="lang-html">  { %  extends &apos;temtest/base.html&apos;  % }
+
+  { %  block content  % }
+      &#x9996;&#x9875;&#x5185;&#x5BB9;
+  { %  endblock content  % }
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="3&#x4E3A;&#x5177;&#x4F53;&#x9875;&#x9762;&#x521B;&#x5EFA;&#x6A21;&#x677F;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;&#x5206;&#x652F;&#x6A21;&#x677F;">3.&#x4E3A;&#x5177;&#x4F53;&#x9875;&#x9762;&#x521B;&#x5EFA;&#x6A21;&#x677F;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;&#x5206;&#x652F;&#x6A21;&#x677F;</h4>
+<ul>
+<li><p>&#x5B9A;&#x4E49;&#x5546;&#x54C1;&#x5217;&#x8868;&#x9875;goodslist.html</p>
+<pre><code class="lang-html">  { %  extends &apos;temtest/base_goods.html&apos;  % }
+  { %  block content  % }
+      &#x5546;&#x54C1;&#x6B63;&#x6587;&#x5217;&#x8868;
+  { %  endblock content  % }
+</code></pre>
+</li>
+<li><p>&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x9875;userpwd.html</p>
+<pre><code class="lang-html">  { %  extends &apos;temtest/base_user.html&apos;  % }
+  { %  block content  % }
+      &#x7528;&#x6237;&#x5BC6;&#x7801;&#x4FEE;&#x6539;
+  { %  endblock content  % }
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="4&#x89C6;&#x56FE;&#x8C03;&#x7528;&#x5177;&#x4F53;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4F20;&#x9012;&#x6A21;&#x677F;&#x4E2D;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;">4.&#x89C6;&#x56FE;&#x8C03;&#x7528;&#x5177;&#x4F53;&#x9875;&#x9762;&#xFF0C;&#x5E76;&#x4F20;&#x9012;&#x6A21;&#x677F;&#x4E2D;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;</h4>
+<ul>
+<li><p>&#x9996;&#x9875;&#x89C6;&#x56FE;index</p>
+<pre><code class="lang-python">  logo=<span class="hljs-string">&apos;welcome to itcast&apos;</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+      <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;temtest/index.html&apos;</span>, {<span class="hljs-string">&apos;logo&apos;</span>: logo})
+</code></pre>
+</li>
+<li><p>&#x5546;&#x54C1;&#x5217;&#x8868;&#x89C6;&#x56FE;goodslist</p>
+<pre><code class="lang-python">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">goodslist</span><span class="hljs-params">(request)</span>:</span>
+      <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;temtest/goodslist.html&apos;</span>, {<span class="hljs-string">&apos;logo&apos;</span>: logo})
+</code></pre>
+</li>
+<li><p>&#x7528;&#x6237;&#x5BC6;&#x7801;&#x89C6;&#x56FE;userpwd</p>
+<pre><code class="lang-python">  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">userpwd</span><span class="hljs-params">(request)</span>:</span>
+      <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;temtest/userpwd.html&apos;</span>, {<span class="hljs-string">&apos;logo&apos;</span>: logo})
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="5&#x914D;&#x7F6E;url">5.&#x914D;&#x7F6E;url</h4>
+<pre><code class="lang-python">  <span class="hljs-keyword">from</span> django.conf.urls <span class="hljs-keyword">import</span> url
+      <span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
+      urlpatterns = [
+          url(<span class="hljs-string">r&apos;^$&apos;</span>, views.index, name=<span class="hljs-string">&apos;index&apos;</span>),
+          url(<span class="hljs-string">r&apos;^list/$&apos;</span>, views.goodslist, name=<span class="hljs-string">&apos;list&apos;</span>),
+          url(<span class="hljs-string">r&apos;^pwd/$&apos;</span>, views.userpwd, name=<span class="hljs-string">&apos;pwd&apos;</span>),
+      ]
+</code></pre>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../home/part5/模板语法.html" class="navigation navigation-prev " aria-label="Previous page: 模板语法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../home/part6/常用web模块.html" class="navigation navigation-next " aria-label="Next page: 常用web模块"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

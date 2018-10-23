@@ -1,0 +1,753 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>模型查询 | Introduction</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../home/part3/4.Model模型.html" />
+    
+    
+    <link rel="prev" href="../../home/part3/2.模型实例.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="5.3"
+        data-chapter-title="模型查询"
+        data-filepath="home/part3/3.模型查询.md"
+        data-basepath="../.."
+        data-revision="Tue Oct 23 2018 23:00:10 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="home/Virtualenv.html">
+            
+                
+                    <a href="../../home/Virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="home/Web开发介绍.html">
+            
+                
+                    <a href="../../home/Web开发介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Web开发介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="home/part1/Django简介.html">
+            
+                
+                    <a href="../../home/part1/Django简介.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="home/part1/Django入门.html">
+            
+                
+                    <a href="../../home/part1/Django入门.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Django简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="home/part1/创建应用.html">
+            
+                
+                    <a href="../../home/part1/创建应用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        创建应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="home/part2/URLconf路由.html">
+            
+                
+                    <a href="../../home/part2/URLconf路由.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        URLconf路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="home/part3/Model模型.html">
+            
+                
+                    <a href="../../home/part3/Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="home/part3/1.定义模型.html">
+            
+                
+                    <a href="../../home/part3/1.定义模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="home/part3/2.模型实例.html">
+            
+                
+                    <a href="../../home/part3/2.模型实例.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        模型实例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="home/part3/3.模型查询.html">
+            
+                
+                    <a href="../../home/part3/3.模型查询.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        模型查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="home/part3/4.Model模型.html">
+            
+                
+                    <a href="../../home/part3/4.Model模型.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Model模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="home/part4/View视图.html">
+            
+                
+                    <a href="../../home/part4/View视图.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        View视图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="home/part4/HttpReqeust.html">
+            
+                
+                    <a href="../../home/part4/HttpReqeust.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        HttpReqeust
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="home/part4/QueryDict.html">
+            
+                
+                    <a href="../../home/part4/QueryDict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        QueryDict
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="home/part4/HttpResponse.html">
+            
+                
+                    <a href="../../home/part4/HttpResponse.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        HttpResponse
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="home/part5/Template模板.html">
+            
+                
+                    <a href="../../home/part5/Template模板.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Template模板
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="home/part5/模板语法.html">
+            
+                
+                    <a href="../../home/part5/模板语法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        模板语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="home/part5/模板继承.html">
+            
+                
+                    <a href="../../home/part5/模板继承.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        模板继承
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="home/part6/常用web模块.html">
+            
+                
+                    <a href="../../home/part6/常用web模块.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        常用web模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="home/part6/静态文件.html">
+            
+                
+                    <a href="../../home/part6/静态文件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        静态文件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="home/part6/Csrf.html">
+            
+                
+                    <a href="../../home/part6/Csrf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Csrf
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="home/part6/Ajax.html">
+            
+                
+                    <a href="../../home/part6/Ajax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Ajax
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="home/part6/状态保持.html">
+            
+                
+                    <a href="../../home/part6/状态保持.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="home/part6/验证码.html">
+            
+                
+                    <a href="../../home/part6/验证码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        验证码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="home/part6/中间件.html">
+            
+                
+                    <a href="../../home/part6/中间件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        中间件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="home/part6/文件上传.html">
+            
+                
+                    <a href="../../home/part6/文件上传.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        文件上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="home/part6/密码管理.html">
+            
+                
+                    <a href="../../home/part6/密码管理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        密码管理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="home/part6/分页及优化.html">
+            
+                
+                    <a href="../../home/part6/分页及优化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        分页及优化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="home/part6/富文本编辑器.html">
+            
+                
+                    <a href="../../home/part6/富文本编辑器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        富文本编辑器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.11" data-path="home/part6/Django部署Apache.html">
+            
+                
+                    <a href="../../home/part6/Django部署Apache.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.11.</b>
+                        
+                        Django部署(Apache)
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Introduction</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6A21;&#x578B;&#x67E5;&#x8BE2;">&#x6A21;&#x578B;&#x67E5;&#x8BE2;</h1>
+<hr>
+<h2 id="1-&#x67E5;&#x8BE2;&#x96C6;">1. &#x67E5;&#x8BE2;&#x96C6;</h2>
+<blockquote>
+<p>&#x5728;&#x7BA1;&#x7406;&#x5668;&#x4E0A;&#x8C03;&#x7528;&#x8FC7;&#x6EE4;&#x5668;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x67E5;&#x8BE2;&#x96C6;,&#x67E5;&#x8BE2;&#x96C6;&#x8868;&#x793A;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x83B7;&#x53D6;&#x7684;&#x5BF9;&#x8C61;&#x96C6;&#x5408;</p>
+<p><strong>&#x67E5;&#x8BE2;&#x96C6;&#x7ECF;&#x8FC7;&#x8FC7;&#x6EE4;&#x5668;&#x7B5B;&#x9009;&#x540E;&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x67E5;&#x8BE2;&#x96C6;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x94FE;&#x5F0F;&#x8FC7;&#x6EE4;</strong></p>
+<p><strong>&#x60F0;&#x6027;&#x6267;&#x884C;&#xFF1A;&#x521B;&#x5EFA;&#x67E5;&#x8BE2;&#x96C6;&#x4E0D;&#x4F1A;&#x5E26;&#x6765;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x76F4;&#x5230;&#x8C03;&#x7528;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;</strong></p>
+<p>&#x4F55;&#x65F6;&#x5BF9;&#x67E5;&#x8BE2;&#x96C6;&#x6C42;&#x503C;&#xFF1A;&#x8FED;&#x4EE3;&#xFF0C;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x4E0E;if&#x5408;&#x7528;</p>
+<p><strong>&#x8FD4;&#x56DE;&#x67E5;&#x8BE2;&#x96C6;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x79F0;&#x4E3A;&#x8FC7;&#x6EE4;&#x5668;</strong></p>
+</blockquote>
+<ul>
+<li>all()</li>
+<li>filter()</li>
+<li>exclude()</li>
+<li>order_by()</li>
+<li><p>values()&#xFF1A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x7136;&#x540E;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x8FD4;&#x56DE;</p>
+</li>
+<li><p>&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">  filter(&#x952E;<span class="hljs-number">1</span>=&#x503C;<span class="hljs-number">1</span>,&#x952E;<span class="hljs-number">2</span>=&#x503C;<span class="hljs-number">2</span>)
+  &#x7B49;&#x4EF7;&#x4E8E;
+  filter(&#x952E;<span class="hljs-number">1</span>=&#x503C;<span class="hljs-number">1</span>).filter(&#x952E;<span class="hljs-number">2</span>=&#x503C;<span class="hljs-number">2</span>)
+</code></pre>
+</li>
+<li><strong>&#x8FD4;&#x56DE;&#x5355;&#x4E2A;&#x503C;&#x7684;&#x65B9;&#x6CD5;</strong><ul>
+<li>get()&#xFF1A;&#x8FD4;&#x56DE;&#x5355;&#x4E2A;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;<ul>
+<li><strong>&#x5982;&#x679C;&#x672A;&#x627E;&#x5230;&#x4F1A;&#x5F15;&#x53D1;&quot;&#x6A21;&#x578B;&#x7C7B;.DoesNotExist&quot;&#x5F02;&#x5E38;</strong></li>
+<li><strong>&#x5982;&#x679C;&#x591A;&#x6761;&#x88AB;&#x8FD4;&#x56DE;&#xFF0C;&#x4F1A;&#x5F15;&#x53D1;&quot;&#x6A21;&#x578B;&#x7C7B;.MultipleObjectsReturned&quot;&#x5F02;&#x5E38;</strong></li>
+</ul>
+</li>
+<li>count()&#xFF1A;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x67E5;&#x8BE2;&#x7684;&#x603B;&#x6761;&#x6570;</li>
+<li>first()&#xFF1A;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li>last()&#xFF1A;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li>exists()&#xFF1A;&#x5224;&#x65AD;&#x67E5;&#x8BE2;&#x96C6;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5219;&#x8FD4;&#x56DE;True</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x9650;&#x5236;&#x67E5;&#x8BE2;&#x96C6;">&#x9650;&#x5236;&#x67E5;&#x8BE2;&#x96C6;</h3>
+<ul>
+<li><p>&#x67E5;&#x8BE2;&#x96C6;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x6807;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x9650;&#x5236;&#xFF0C;&#x7B49;&#x540C;&#x4E8E;sql&#x4E2D;&#x7684;limit&#x548C;offset&#x5B50;&#x53E5;</p>
+</li>
+<li><p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x652F;&#x6301;&#x8D1F;&#x6570;&#x7D22;&#x5F15;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x4E0B;&#x6807;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x67E5;&#x8BE2;&#x96C6;&#xFF0C;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x67E5;&#x8BE2;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;[0]&#xFF0C;&#x7B49;&#x540C;&#x4E8E;[0:1].get()&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6570;&#x636E;&#xFF0C;[0]&#x5F15;&#x53D1;IndexError&#x5F02;&#x5E38;&#xFF0C;[0:1].get()&#x5F15;&#x53D1;DoesNotExist&#x5F02;&#x5E38;</p>
+<pre><code class="lang-python">  <span class="hljs-comment">#&#x8FD9;&#x4F1A;&#x8FD4;&#x56DE;&#x524D;5&#x4E2A;&#x5BF9;&#x8C61; LIMIT 5</span>
+  Entry.objects.all()[:<span class="hljs-number">5</span>]
+  <span class="hljs-comment">#&#x8FD9;&#x5C06;&#x8FD4;&#x56DE;&#x7B2C;&#x516D;&#x4E2A;&#x5230;&#x7B2C;&#x5341;&#x4E2A;&#x5BF9;&#x8C61; OFFSET 5 LIMIT 5</span>
+  Entry.objects.all()[<span class="hljs-number">5</span>:<span class="hljs-number">10</span>]
+</code></pre>
+</li>
+</ul>
+<h2 id="2-&#x5B57;&#x6BB5;&#x67E5;&#x8BE2;">2. &#x5B57;&#x6BB5;&#x67E5;&#x8BE2;</h2>
+<ul>
+<li>&#x5B9E;&#x73B0;where&#x5B50;&#x540D;&#xFF0C;&#x4F5C;&#x4E3A;&#x65B9;&#x6CD5;filter()&#x3001;exclude()&#x3001;get()&#x7684;&#x53C2;&#x6570;</li>
+<li>&#x8BED;&#x6CD5;&#xFF1A;&#x5C5E;&#x6027;&#x540D;&#x79F0;__&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;=&#x503C;</li>
+<li>&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x5DE6;&#x4FA7;&#x662F;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#xFF0C;&#x53F3;&#x4FA7;&#x662F;&#x6BD4;&#x8F83;&#x7C7B;&#x578B;</li>
+<li>&#x5BF9;&#x4E8E;&#x5916;&#x952E;&#xFF0C;&#x4F7F;&#x7528;&#x201C;&#x5C5E;&#x6027;&#x540D;_id&#x201D;&#x8868;&#x793A;&#x5916;&#x952E;&#x7684;&#x539F;&#x59CB;&#x503C;</li>
+<li>&#x8F6C;&#x4E49;&#xFF1A;like&#x8BED;&#x53E5;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;%&#x4E0E;&#xFF0C;&#x5339;&#x914D;&#x6570;&#x636E;&#x4E2D;&#x7684;%&#x4E0E;&#xFF0C;&#x5728;&#x8FC7;&#x6EE4;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x5199;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;filter(title__contains=&quot;%&quot;)=&gt;where title like &apos;%\%%&apos;&#xFF0C;&#x8868;&#x793A;&#x67E5;&#x627E;&#x6807;&#x9898;&#x4E2D;&#x5305;&#x542B;%&#x7684;</li>
+</ul>
+<h3 id="&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;">&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<ul>
+<li><p>exact&#xFF1A;&#x8868;&#x793A;&#x5224;&#x7B49;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5199;&#x201C; &#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#x201D;&#xFF0C;&#x8868;&#x793A;&#x5224;&#x7B49;</p>
+<pre><code class="lang-python">  filter(isDelete=<span class="hljs-keyword">False</span>)
+</code></pre>
+</li>
+<li><p>contains&#xFF1A;&#x662F;&#x5426;&#x5305;&#x542B;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</p>
+<pre><code class="lang-python">  exclude(btitle__contains=<span class="hljs-string">&apos;&#x4F20;&apos;</span>)
+</code></pre>
+</li>
+<li><p>startswith&#x3001;endswith&#xFF1A;&#x4EE5;value&#x5F00;&#x5934;&#x6216;&#x7ED3;&#x5C3E;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</p>
+<pre><code class="lang-python">  exclude(btitle__endswith=<span class="hljs-string">&apos;&#x4F20;&apos;</span>)
+</code></pre>
+</li>
+<li><p>isnull&#x3001;isnotnull&#xFF1A;&#x662F;&#x5426;&#x4E3A;null</p>
+<pre><code class="lang-python">  filter(btitle__isnull=<span class="hljs-keyword">False</span>)
+</code></pre>
+</li>
+<li><p>&#x5728;&#x524D;&#x9762;&#x52A0;&#x4E2A;i&#x8868;&#x793A;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x5982;iexact&#x3001;icontains&#x3001;istarswith&#x3001;iendswith</p>
+</li>
+<li><p>in&#xFF1A;&#x662F;&#x5426;&#x5305;&#x542B;&#x5728;&#x8303;&#x56F4;&#x5185;</p>
+<pre><code class="lang-python">  filter(pk__in=[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+</code></pre>
+</li>
+<li><p>gt&#x3001;gte&#x3001;lt&#x3001;lte&#xFF1A;&#x5927;&#x4E8E;&#x3001;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x3001;&#x5C0F;&#x4E8E;&#x3001;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</p>
+<pre><code class="lang-python">  filter(id__gt=<span class="hljs-number">3</span>)
+</code></pre>
+</li>
+<li><p>year&#x3001;month&#x3001;day&#x3001;week_day&#x3001;hour&#x3001;minute&#x3001;second&#xFF1A;&#x5BF9;&#x65E5;&#x671F;&#x95F4;&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;</p>
+<pre><code class="lang-python">  filter(bpub_date__year=<span class="hljs-number">1980</span>)
+  filter(bpub_date__gt=date(<span class="hljs-number">1980</span>, <span class="hljs-number">12</span>, <span class="hljs-number">31</span>))
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x7528;q&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x67E5;&#x627E;">&#x7528;Q&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x67E5;&#x627E;</h2>
+<p>&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x67E5;&#x8BE2; - &#x8F93;&#x5165;<code>filter()</code>&#x7B49; - &#x662F;&#x201C;AND&#x201D;&#x7F16;&#x8F91;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x3002;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x6267;&#x884C;&#x66F4;&#x590D;&#x6742;&#x7684;&#x67E5;&#x8BE2;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5E26;&#x6709;<code>OR</code>&#x8BED;&#x53E5;&#x7684;&#x67E5;&#x8BE2;&#xFF09;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;<code>Qobjects</code></p>
+<p>&#x4F8B;&#x5982; &#x67E5;&#x8BE2;or&#x201C;&#x6216;&#x201D;&#x7684;&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Q&#x5BF9;&#x8C61; </span>
+<span class="hljs-keyword">from</span> django.db.models <span class="hljs-keyword">import</span> Q
+
+ob = Goods.objects.filter(Q(id__contains=v)|Q(title__contains=v))
+</code></pre>
+<h3 id="&#x5176;&#x5B83;&#x67E5;&#x8BE2;&#x65B9;&#x6848;">&#x5176;&#x5B83;&#x67E5;&#x8BE2;&#x65B9;&#x6848;:</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6A21;&#x578B;&#x63D0;&#x4F9B; extra</span>
+ob = Types.objects.extra(select = {<span class="hljs-string">&apos;paths&apos;</span>:<span class="hljs-string">&apos;concat(path,id)&apos;</span>}).order_by(<span class="hljs-string">&apos;paths&apos;</span>)
+<span class="hljs-comment">#&#x7B49;&#x540C;&#x4E8E;</span>
+select *,concat(path,id) <span class="hljs-keyword">as</span> paths <span class="hljs-keyword">from</span> types order by paths;
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../home/part3/2.模型实例.html" class="navigation navigation-prev " aria-label="Previous page: 模型实例"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../home/part3/4.Model模型.html" class="navigation navigation-next " aria-label="Next page: Model模型"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
